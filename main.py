@@ -200,7 +200,7 @@ def get_top_n_words(tf_idf, n: int):
     return result
 
 
-def convert_data(train: List[List[str]], test: List[List[str]], labels: List[int], top=1000):
+def convert_data(train: List[List[str]], test: List[List[str]], labels: List[int], top=10000):
     combined = train+test
     res = tf_idf_other(combined, labels)
     reduced = get_top_n_words(res, top)

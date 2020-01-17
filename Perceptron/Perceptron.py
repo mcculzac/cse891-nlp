@@ -47,7 +47,7 @@ class Perceptron:
 
         return y_prime, predictions
 
-    def train(self, data: np.array, labels: np.array, lr: float, epochs: int=100):
+    def train(self, data: np.array, labels: np.array, lr: float, epochs: int=1000):
         N = len(set(labels))
         for _ in range(epochs):
             print('Epoch', _)
